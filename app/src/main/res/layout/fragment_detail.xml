@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:id="@+id/detail_container"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftGuide"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="25dp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuide"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="25dp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bbanner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <ImageView
+                android:id="@+id/shield"
+                android:layout_width="match_parent"
+                android:layout_height="900dp"
+                android:src="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="invisible"
+                />
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:src="@drawable/back"
+                android:clickable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:text="Звездные войны"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/leftGuide"
+                app:layout_constraintTop_toBottomOf="@id/banner" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Сопротивление собирает отряд для выполнения особой миссии - надо выкрасть чертежи самого совершенного и мертоносного оружия Империи. Не всем суждено вернуться домой, но герои готовы к этому, ведь на кону судьба Галактики"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_marginVertical="8dp"
+                app:layout_constraintEnd_toEndOf="@id/rightGuide"
+                app:layout_constraintStart_toStartOf="@id/leftGuide"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+            <TextView
+                android:id="@+id/genre_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Жанры: "
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                android:layout_marginVertical="8dp"
+                app:layout_constraintStart_toStartOf="@id/leftGuide"/>
+
+            <TextView
+                android:id="@+id/genre_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:text="фантастика, приключения"
+                app:layout_constraintStart_toEndOf="@id/genre_word"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                android:layout_marginVertical="8dp"
+                />
+
+            <TextView
+                android:id="@+id/country_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Страны: "
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/genre_data"
+                app:layout_constraintStart_toStartOf="@id/leftGuide"/>
+
+            <TextView
+                android:id="@+id/country_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/country_word"
+                app:layout_constraintTop_toTopOf="@id/country_word"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Nadbitov_fintech</string>
+    <string name="popular_category">Популярные</string>
+    <string name="favourites_category">Избранное</string>
+    <string name="_2016">(2016)</string>
+
+</resources>
